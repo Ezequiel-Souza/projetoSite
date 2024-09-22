@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home2</title>
+	<link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: center;
+        }
+        h1 {
+            margin: 20px 0;
+            text-align: center;
+        }
+		
+		.manual {
+			background-color: red;
+            text-align: justify;           
+			padding: 2rem;			
+			box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+			width: 600px;
+        }
+        h2, h3 {
+            margin: 10px 0;
+		}
+		
+        .container {
+            text-align: right;
+            padding-right: 1300px;
+            /*align-self: flex-end; Alinha os botões à direita */
+            /*margin-top: auto;  Mantém os botões mais para baixo */
+        }
+        .button {
+            display: block;
+            padding: 15px 25px;
+            font-size: 16px;
+            text-align: center;
+            text-decoration: none;
+            color: white;
+            background-color: #007BFF;
+            border-radius: 5px;
+            margin: 10px 0;
+            transition: background-color 0.3s ease;
+            width: 150px;
+        }
+        .button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Você está na HOME2</h1>
+    
+    <div class="container">
+        <a href="index.html" class="button">Voltar pagina Home</a>
+    </div>
+	
+	<div class="home-container">
+        <h1>👽</h1>
+        <p>Login feito com sucesso!</p>
+        <button id="logoutBtn">Volta ao Login</button>
+    </div>
+	
+	<script>
+        const logoutBtn = document.getElementById('logoutBtn');
+        logoutBtn.addEventListener('click', function() {
+            // Redirecionar para a página de login (fora da pasta 'pages')
+            window.location.href = '../login.html';  // Atualizando o caminho do login
+        });
+    </script>
+
+</body>
+</html>

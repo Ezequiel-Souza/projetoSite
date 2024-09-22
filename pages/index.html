@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+	<link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: center;
+        }
+        h1 {
+            margin: 20px 0;
+            text-align: center;
+        }
+		
+		.manual {
+			background-color: red;
+            text-align: justify;           
+			padding: 2rem;			
+			box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+			width: 600px;
+        }
+        h2, h3 {
+            margin: 10px 0;
+		}
+		
+        .container {
+            text-align: right;
+            padding-right: 1300px;
+            /*align-self: flex-end; Alinha os botões à direita */
+            /*margin-top: auto;  Mantém os botões mais para baixo */
+        }
+        .button {
+            display: block;
+            padding: 15px 25px;
+            font-size: 16px;
+            text-align: center;
+            text-decoration: none;
+            color: white;
+            background-color: #007BFF;
+            border-radius: 5px;
+            margin: 10px 0;
+            transition: background-color 0.3s ease;
+            width: 150px;
+        }
+        .button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Bem Vindo a Pagina Home</h1>
+	<form>
+	<div class="manual">
+        <h2>Manual de Uso</h2>
+        <h3>Passo 1: Navegue pelas páginas usando os botões à direita.</h3>
+        <h3>Passo 2: Explore as funcionalidades de cada página.</h3>
+        <h3>Passo 3: Se precisar de ajuda, entre em contato conosco.</h3>
+    </div>
+	</form>
+    
+    <div class="container">
+        <a href="page1.html" class="button">Go to Page 1</a>
+        <a href="page2.html" class="button">Go to Page 2</a>
+        <a href="page3.html" class="button">Go to Page 3</a>
+    </div>
+	
+	<div class="home-container">
+        <h1> </h1>
+        <p>Volta para pagina de Login</p>
+        <button id="logoutBtn">SAIR!</button>
+    </div>
+	
+	<script>
+        const logoutBtn = document.getElementById('logoutBtn');
+        logoutBtn.addEventListener('click', function() {
+            // Redirecionar para a página de login (fora da pasta 'pages')
+            window.location.href = '../login.html';  // Atualizando o caminho do login
+        });
+    </script>
+
+</body>
+</html>

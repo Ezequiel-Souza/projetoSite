@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <link rel="stylesheet" href="../styles.css"> <!-- Atualizando o caminho do CSS -->
+</head>
+<body>
+    <div class="home-container">
+        <h1>Welcome to the Home Page</h1>
+        <p>You are successfully logged in!</p>
+        <button id="logoutBtn">Logout</button>
+    </div>
+
+    <script>
+        const logoutBtn = document.getElementById('logoutBtn');
+        logoutBtn.addEventListener('click', function() {
+            // Redirecionar para a página de login (fora da pasta 'pages')
+            window.location.href = '../login.html';  // Atualizando o caminho do login
+        });
+    </script>
+</body>
+</html>
